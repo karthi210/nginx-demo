@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 
 function App() {
   const [msg, setMsg] = useState("");
 
   useEffect(() => {
-    axios.get("/api/message")
-      .then(res => setMsg(res.data.message));
+    fetch("/api/message")
+      .then(res => res.json())
+      .then(data => setMsg(data.message));
   }, []);
 
   return (
