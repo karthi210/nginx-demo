@@ -9,6 +9,6 @@ app.get("/api/message", (req, res) => {
   res.json({ message: "Hello from Backend via Jenkins + Nginx 🚀" });
 });
 
-app.listen(5000, () => {
-  console.log("Backend running on port 5000");
+app.listen(8000, () => {
+  console.log("Backend running on port 8000");
 });
